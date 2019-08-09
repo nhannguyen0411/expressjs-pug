@@ -1,0 +1,20 @@
+html
+	head
+		link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css")
+		script(src="https://kit.fontawesome.com/a58ac99150.js")
+		link(rel='stylesheet', href='/style/custom.css')
+	body
+		nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+			a.navbar-brand.text-light(href='#') CodersTokyo
+			button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+				span.navbar-toggler-icon
+			#navbarSupportedContent.collapse.navbar-collapse
+				ul.navbar-nav.mr-auto
+					li.nav-item.active
+						a.nav-link.text-light(href='/') Home
+					li.nav-item
+						a.nav-link.text-light(href='/user') User
+					li.nav-item
+						a.nav-link.text-light(href='/user/create') New user
+		.container.pt-5
+			block content

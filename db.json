@@ -1,0 +1,20 @@
+{
+  "users": [
+    {
+      "name": "Ti"
+    },
+    {
+      "name": "Nhan"
+    },
+    {
+      "name": "Truc"
+    },
+    {
+      "name": "Nhan"
+    },
+    {
+      "name": "Chau",
+      "phone": "0123456789"
+    }
+  ]
+}

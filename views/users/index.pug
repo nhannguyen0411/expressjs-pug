@@ -1,0 +1,21 @@
+extends ../layouts/common
+block content
+
+	h1 User
+	h4 Click here to comeback home or to page create new user
+	.d-flex.align-items-center
+		form.ml-auto(class='form-inline', action='/user/search', method='GET')
+			input(class='form-control', type='text', name='q')
+			button(class='btn btn-primary') search
+	
+	table.table
+		tr
+			th Name
+			th Phone
+			th Feature
+		each user in users
+			tr
+				td= user.name
+				td= user.phone
+				td
+					a.btn.btn-light(href='#') Edit
