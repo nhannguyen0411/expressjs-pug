@@ -12,10 +12,10 @@ block content
 		tr
 			th Name
 			th Phone
-			th Feature
+			th Actions
 		each user in users
 			tr
 				td= user.name
 				td= user.phone
 				td
-					a.btn.btn-light(href='#') Edit
+					a.btn.btn-light(href='/user/edit/' + user.id) Edit

@@ -1,19 +1,28 @@
 {
   "users": [
     {
-      "name": "Ti"
+      "name": "Ti",
+      "phone": "0123",
+      "id": 1
     },
     {
-      "name": "Nhan"
+      "name": "Nhan",
+      "phone": "01234",
+      "id": 2
     },
     {
-      "name": "Truc"
+      "name": "Truc",
+      "phone": "01235",
+      "id": 3
     },
     {
-      "name": "Nhan"
+      "name": "Nhan",
+      "phone": "01236",
+      "id": 4
     },
     {
       "name": "Chau",
+      "id": 5,
       "phone": "0123456789"
     }
   ]

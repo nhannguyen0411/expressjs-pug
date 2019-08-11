@@ -1,0 +1,13 @@
+extends ../layouts/common
+block content
+
+	h1 Change User
+
+	form(method='POST')
+		.form-group
+			label(for='name') Name
+			input#name.form-control(type='text', name='name', required)
+		.form-group
+			label(for='phone') Phone
+			input#phone.form-control(type='text', name='phone', required)
+		button.btn.btn-primary Save

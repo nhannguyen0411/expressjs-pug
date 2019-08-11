@@ -1,0 +1,15 @@
+extends ../layouts/common
+block content
+
+	h1 Edit User
+	table.table
+		tr
+			th Name
+			th Phone
+			th Actions
+		tr
+			td= users.name
+			td= users.phone
+			td
+				a.btn.btn-light(href='/user/edit/' + users.id + '/delete') X
+				a.btn.btn-light(href='/user/edit/' + users.id + '/change') C

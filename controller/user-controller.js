@@ -16,9 +16,45 @@ module.exports.search = (req, res) => {
 		users: matchedUser
 	})
 }
+
+module.exports.edit = (req, res) => {
+	let id = parseInt(req.params.id);
+
+	let user = db.get('users').find({ id: id }).value();
+
+	res.render('users/edit', {
+		users: user
+	})
+}
+
+module.exports.del = (req, res) => {
+	let id = parseInt(req.params.id);
+	db.get('users').remove({ id: id }).write();
+	res.render('users/index', {
+		users: db.get('users').value()
+	})
+	//res.redirect('/');
+}
+
+module.exports.change = (req, res) => {
+	res.render('users/edit-change');
+}
+
+module.exports.postChange = (req, res) => {
+	let id = parseInt(req.params.id);
+	let name = req.body.name;
+	let phone = req.body.phone;
+	db.get('users').find({ id: id }).assign({"name": name, "phone": phone}).write();
+
+	res.render('users/index', {
+		users: db.get('users').value()
+	})
+}
+
 module.exports.create = (req, res) => {
 	res.render('users/create')
 }
+
 module.exports.postCreate = (req, res) => {
 	let errors = [];
 

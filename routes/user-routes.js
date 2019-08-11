@@ -8,6 +8,16 @@ router.get('/search', controller.search);
 
 router.get('/create', controller.create);
 
+router.get('/edit/:id', controller.edit);
+
+router.get('/edit/:id/delete', controller.del);
+
+router.get('/edit/:id/change', controller.change);
+
+router.post('/edit/:id/change', controller.postChange);
+
 router.post('/create', controller.postCreate);
+
+
 
 module.exports = router;
