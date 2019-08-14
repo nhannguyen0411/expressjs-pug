@@ -4,6 +4,12 @@ const controller = require('../controller/user-controller')
 
 router.get('/', controller.index);
 
+
+router.get('/cookie', (req, res) => {
+	res.cookie('user-id', 123456);
+	res.send('Hello');
+})
+
 router.get('/search', controller.search);
 
 router.get('/create', controller.create);

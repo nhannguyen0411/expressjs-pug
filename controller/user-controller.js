@@ -52,6 +52,7 @@ module.exports.postChange = (req, res) => {
 }
 
 module.exports.create = (req, res) => {
+	console.log(req.cookies);
 	res.render('users/create')
 }
 
