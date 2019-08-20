@@ -1,0 +1,29 @@
+extends ../layouts/common
+block content
+	h1 Products
+	.d-flex.align-items-center
+		form.ml-auto(class='form-inline', action='/products/search', method='GET')
+			input(class='form-control', type='text', name='q')
+			button(class='btn btn-primary') search
+	div.row
+		each item in products
+			div.col-3
+				div.card
+					img.card-img-top(src= item.image)
+					div.card-body
+						h5.card-title= item.name
+						p.card-text= item.description
+						p.text-muted= item.price
+						a.btn.btn-primary(href='#') Go some where
+	nav(aria-label='Page navigation example')
+		ul.pagination.justify-content-center
+			li.page-item.disabled
+				a.page-link(href='#', tabindex='-1', aria-disabled='true') Previous
+			li.page-item
+				a.page-link(href='/products?page=1') 1
+			li.page-item
+				a.page-link(href='/products?page=2') 2
+			li.page-item
+				a.page-link(href='/products?page=3') 3
+			li.page-item
+				a.page-link(href='#') Next
