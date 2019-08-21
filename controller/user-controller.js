@@ -33,7 +33,7 @@ module.exports.del = (req, res) => {
 	res.render('users/index', {
 		users: db.get('users').value()
 	})
-	//res.redirect('/');
+	res.redirect('/user');
 }
 
 module.exports.change = (req, res) => {
@@ -44,15 +44,16 @@ module.exports.postChange = (req, res) => {
 	let id = parseInt(req.params.id);
 	let name = req.body.name;
 	let phone = req.body.phone;
-	db.get('users').find({ id: id }).assign({"name": name, "phone": phone}).write();
+	req.body.avatar = req.file.path.split('\\').slice(1).join('\\');
+	db.get('users').find({ id: id }).assign({"name": name, "phone": phone, "avatar": req.body.avatar}).write();
 
-	res.render('users/index', {
-		users: db.get('users').value()
-	})
+	// res.render('users/index', {
+	// 	users: db.get('users').value()
+	// })
+	res.redirect('/user');
 }
 
 module.exports.create = (req, res) => {
-	console.log(req.cookies);
 	res.render('users/create')
 }
 
@@ -74,9 +75,13 @@ module.exports.postCreate = (req, res) => {
 		});
 		return;
 	}
+
+	req.body.avatar = req.file.path.split('\\').slice(1).join('\\');
+
 	db.get('users').push(req.body).write();
 
-	res.render('users/index', {
-		users: db.get('users').value()
-	})
+	// res.render('users/index', {
+	// 	users: db.get('users').value()
+	// })
+	res.redirect('/user');
 }

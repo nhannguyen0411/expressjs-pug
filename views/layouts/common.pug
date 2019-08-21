@@ -16,5 +16,13 @@ html
 						a.nav-link.text-light(href='/user') User
 					li.nav-item
 						a.nav-link.text-light(href='/user/create') New user
+					li.nav-item
+						a.nav-link.text-light(href='/products') Products
+					li.nav-item
+						a.nav-link.text-light(href='#') Cart 
+							span.text-dark.badge.badge-light 0
+			if user
+				p.text-light= user.name
+				img(src= user.avatar, width='32')
 		.container.pt-5
 			block content

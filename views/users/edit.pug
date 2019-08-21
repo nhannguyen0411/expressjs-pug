@@ -4,10 +4,13 @@ block content
 	h1 Edit User
 	table.table
 		tr
+			th Avatar
 			th Name
 			th Phone
 			th Actions
 		tr
+			td
+				img(src= users.avatar, width='32')
 			td= users.name
 			td= users.phone
 			td

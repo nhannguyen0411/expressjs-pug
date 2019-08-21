@@ -1,31 +1,34 @@
 {
   "users": [
     {
-      "name": "Ti",
-      "phone": "0123",
-      "id": 1
-    },
-    {
-      "name": "Nhan",
-      "phone": "01234",
-      "id": 2,
+      "id": 1,
+      "name": "Nhannn",
       "email": "nguyentrongnhanc8@gmail.com",
-      "password": "123456"
+      "password": "123456",
+      "phone": "0776766725",
+      "avatar": "uploads\\9155d6df7b34cbd36a9c4d50f49fef67"
     },
     {
+      "id": 2,
+      "name": "Tiiii",
+      "phone": "1234",
+      "avatar": "uploads\\a6501d7f615178c5bbbf6ee70c0af71c"
+    },
+    {
+      "id": 3,
       "name": "Truc",
-      "phone": "01235",
-      "id": 3
+      "phone": "1234",
+      "avatar": "uploads\\edfc1ce2e9bb9c8aa1eabdcdeb0b133d"
     },
     {
-      "name": "Nhan",
-      "phone": "01236",
-      "id": 4
+      "name": "Bao",
+      "phone": "1234",
+      "avatar": "uploads\\bc4d61fae104e38537d84a3a848d31e6"
     },
     {
-      "name": "Chau",
-      "id": 5,
-      "phone": "0123456789"
+      "name": "Chauu",
+      "phone": "123",
+      "avatar": "uploads\\1731ce5cbefd042f50c8ef2fb7fa3c38"
     }
   ],
   "products": [
