@@ -20,7 +20,10 @@ html
 						a.nav-link.text-light(href='/products') Products
 					li.nav-item
 						a.nav-link.text-light(href='#') Cart 
-							span.text-dark.badge.badge-light 0
+							if session
+								span.text-dark.badge.badge-light= session.sum
+							else
+								span.text-dark.badge.badge-light 0
 			if user
 				p.text-light= user.name
 				img(src= user.avatar, width='32')

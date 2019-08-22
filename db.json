@@ -312,5 +312,16 @@
       "description": "odio condimentum id luctus nec molestie sed justo pellentesque viverra pede ac",
       "price": "$23.36"
     }
+  ],
+  "sessions": [
+    {
+      "id": "dEjeXsGpP",
+      "cart": {
+        "4d904641-57c7-4ee0-9396-bada4b03c662": 3,
+        "b0f15e13-87b9-489e-833b-bcdf36ca0312": 7,
+        "32074c42-21c0-450c-91fe-f34482f3d658": 2
+      },
+      "sum": 12
+    }
   ]
 }
