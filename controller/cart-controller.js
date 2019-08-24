@@ -26,9 +26,10 @@ module.exports.addToCart = (req, res, next) => {
 		sum += data.cart[item];
 	}
 
-	db.get('sessions').find({ id: sessionId }).set('sum', sum).write();
-
-	res.locals.session = data;
+	db.get('sessions')
+	.find({ id: sessionId })
+	.set('sum', sum)
+	.write();
 
 	// res.render('layouts/common', {
 	// 	items: sum
